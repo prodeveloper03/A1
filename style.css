@@ -1,0 +1,129 @@
+body{
+    margin:0px;
+    padding:0px;
+    background: rgb(11,	25,	46);
+}
+.logo{
+    margin:12px 0px 0px 58px;
+    border:2px  solid;
+    width:35px;
+    height:35px;
+    border-radius:50px;
+    color:rgb(100,234,203);
+    position: absolute;
+    top:3px;
+}
+.a{
+    margin-top:1px; 
+    font-family: Herculanum;
+    font-size: 29px;
+    text-align: center;
+}
+.logo:hover{
+    background: rgb(24, 37, 54);
+}
+.nav{
+    background: rgb(11,	25,	46);
+    overflow: hidden;
+    padding:20px 0px 24px 0px;
+    font-family:Andale Mono;
+    font-size: 13px;
+    box-shadow: rgba(0, 0, 0, 0.253) 0px 1px 50px;
+}
+.nav ul li a{
+    text-decoration: none;
+    padding-right: 43px;
+    color:rgb(182, 193, 218);
+    float:right;
+}
+.nav ul li {
+    list-style: none;
+    margin:0px 143px 0px 0px;
+}
+.nav ul li a:hover{
+    color: rgb(100,234,203);
+    text-decoration: underline;
+}
+.resume{
+    top:17px;
+    color:rgb(163, 218, 205);
+    right:50px;
+    padding-top:13px;
+    text-align: center;
+    width:80px;
+    height:28px;
+    border:1px solid rgb(100	,234,	203);
+    border-radius:5px;
+    position: absolute;
+}
+h1{
+    margin:1px 0px 0px 13px;
+    padding:00px;
+    font-family: sans-serif;
+    font-size: 69px;
+    letter-spacing: 1px;
+}
+h5{
+    margin:13px 13px 13px 13px;
+    padding:0px;
+    font-family:AppleGothic;
+    font-size: 15px;
+    color:rgb(136,147,175);
+    letter-spacing: 1px;
+    
+}
+h6{
+    margin:13px 13px 13px 13px;
+    padding:0px;
+    font-family:Andale Mono;
+    font-size: 15px;
+    color:rgb(100,234,203);
+}
+h7{
+    margin:13px 13px 13px 13px;
+    padding:0px;
+    font-family:Andale Mono;
+    font-size: 12px;
+    color:rgb(136,147,175);
+}
+.emoji{
+    /* still wanna work on  */
+}
+.intro{
+    width:70%;
+    height:600px;
+    margin-left:21%;
+    margin-top:10%;
+}
+button{
+    margin:13px 13px 13px 13px;
+    background:rgba(255, 255, 255, 0);
+    color:rgb(108,254,218);
+    text-align: center;
+    border:1px solid rgb(108,254,218);
+    border-radius:5px;
+    cursor: pointer;
+    padding:19px;
+    font-size:14px;
+    letter-spacing: 2px;
+}
+.left{
+    width:100px;
+    height:320px;
+    position:fixed;
+    bottom:0%;
+    right:3%;
+    writing-mode: vertical-rl;
+    letter-spacing: 1px;
+    color:white;
+    overflow: initial;
+}
+.line{
+    position:fixed;
+    right:3%;
+    margin:0px 10px 0px 0px;
+    bottom:0px;
+    background-color:rgb(136,147,175);
+    width:1px;
+    height:12%;
+}
