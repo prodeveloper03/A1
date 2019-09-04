@@ -3,6 +3,11 @@ body{
     padding:0px;
     background: rgb(11,	25,	46);
 }
+
+@font-face{
+    font-family: cust1;
+    src:url(fonts/Chilanka-Regular.ttf);
+}
 .logo{
     margin:12px 0px 0px 58px;
     border:2px  solid;
@@ -62,13 +67,20 @@ h1{
     font-size: 69px;
     letter-spacing: 1px;
 }
+h3{
+    margin:1px 0px 0px 13px;
+    padding:00px;
+    font-family: sans-serif;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color:rgb(230,241,254);
+}
 h5{
     margin:13px 13px 13px 13px;
     padding:0px;
-    font-family:AppleGothic;
+    font-family:cust1;
     font-size: 15px;
     color:rgb(136,147,175);
-    letter-spacing: 1px;
     
 }
 h6{
@@ -78,12 +90,13 @@ h6{
     font-size: 15px;
     color:rgb(100,234,203);
 }
-h7{
+.left a{
     margin:13px 13px 13px 13px;
     padding:0px;
     font-family:Andale Mono;
     font-size: 12px;
     color:rgb(136,147,175);
+    text-decoration: none;
 }
 .emoji{
     /* still wanna work on  */
@@ -126,3 +139,15 @@ button{
     width:1px;
     height:12%;
 }
+ .box{
+     margin:16% 0 10% 21%;
+     display:block;
+     width:400px;
+     height:500px;
+ }
+  p{
+      font-family: cust1;
+      color:rgb(136,147,175);
+      line-height: 25px;
+      font-size: 17px;
+  }
