@@ -12,7 +12,7 @@
         var i=0;
         var blink = ["|", "/", "-", "\\"];
         function loading(){
-
+            // --------------------dont play here ----------------------------------
             var d = new Date();
             var n = d.toLocaleTimeString();
             var day=n.slice(8);
@@ -24,12 +24,10 @@
             }
             else{
                 var x = document.getElementById("check");
-                x.setAttribute("checked", "False");
+                x.removeAttribute("checked");
                 document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(223, 223, 223);";
             }
-
-    
-
+            // --------------------dont play here ----------------------------------
             var time=Math.floor((Math.random()*10)*2)*100;
             time+=4000;
             intrevel=Math.floor(time/4);
@@ -68,9 +66,9 @@
 <body onload="loading()">
 <!-- <body> -->
     
-    <!-- <div id="ani">
+    <div id="ani">
         <video src="Untitled.m4v" width="70%" height="60%" autoplay></video>
-    </div> -->
+    </div>
     <div class="lod">
         <p id="loading"></p>
     </div>
@@ -78,6 +76,8 @@
         <input type="checkbox" id="check" onclick="slider()" >
         <span class="slider round"></span>
     </label>
-    <center><p id="crtime"></p></center>
+    &#1F9D1
+    <p>🌙</p>
+    <p>🌞</p>
 </body>
 </html>
