@@ -1,195 +1,64 @@
 body{
     margin:0px;
     padding:0px;
-    background: rgb(11,	25,	46);
+    background: rgb(223, 223, 223);
 }
-
-@font-face{
-    font-family: cust1;
-    src:url(fonts/Chilanka-Regular.ttf);
-}
-.logo{
-    margin:12px 0px 0px 58px;
-    border:2px  solid;
-    width:35px;
-    height:35px;
-    border-radius:50px;
-    color:rgb(100,234,203);
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
     position: absolute;
-    top:3px;
-}
-.a{
-    margin-top:1px; 
-    font-family: Herculanum;
-    font-size: 29px;
-    text-align: center;
-}
-.logo:hover{
-    background: rgb(24, 37, 54);
-}
-.nav{
-    background: rgb(11,	25,	46);
-    overflow: hidden;
-    padding:20px 0px 24px 0px;
-    font-family:Andale Mono;
-    font-size: 13px;
-    box-shadow: rgba(0, 0, 0, 0.253) 0px 1px 50px;
-}
-.nav ul li a{
-    text-decoration: none;
-    padding-right: 43px;
-    color:rgb(182, 193, 218);
-    float:right;
-}
-.nav ul li {
-    list-style: none;
-    margin:0px 143px 0px 0px;
-}
-.nav ul li a:hover{
-    color: rgb(100,234,203)
-}
-.resume{
-    top:17px;
-    color:rgb(163, 218, 205);
-    right:50px;
-    padding-top:13px;
-    text-align: center;
-    width:80px;
-    height:28px;
-    border:1px solid rgb(100,234,203);
-    border-radius:5px;
-    position: absolute;
-}
-h1{
-    margin:1px 0px 0px 13px;
-    padding:00px;
-    font-family: sans-serif;
-    font-size: 69px;
-    letter-spacing: 1px;
-}
-h3{
-    margin:1px 0px 0px 13px;
-    padding:00px;
-    font-family: sans-serif;
-    font-size: 27px;
-    letter-spacing: 1px;
-    color:rgb(230,241,254);
-}
-h5{
-    margin:13px 13px 13px 13px;
-    padding:0px;
-    font-family:cust1;
-    font-size: 15px;
-    color:rgb(136,147,175); 
-}
-h6{
-    margin:13px 13px 13px 13px;
-    padding:0px;
-    font-family:Andale Mono;
-    font-size: 15px;
-    color:rgb(100,234,203);
-}
-.left a{
-    margin:13px 13px 13px 13px;
-    padding:0px;
-    font-family:Andale Mono;
-    font-size: 12px;
-    color:rgb(136,147,175);
-    text-decoration: none;
-}
-.intro{
-    width:70%;
-    height:600px;
-    margin-left:21%;
-    margin-top:10%;
-}
-button{
-    margin:13px 13px 13px 13px;
-    background:rgba(255, 255, 255, 0);
-    color:rgb(108,254,218);
-    text-align: center;
-    border:1px solid rgb(108,254,218);
-    border-radius:5px;
     cursor: pointer;
-    padding:19px;
-    font-size:14px;
-    letter-spacing: 2px;
-}
-.left{
-    width:100px;
-    height:320px;
-    position:fixed;
-    bottom:0%;
-    right:3%;
-    writing-mode: vertical-rl;
-    letter-spacing: 1px;
-    color:white;
-    overflow: initial;
-}
-.line{
-    position:fixed;
-    right:3%;
-    margin:0px 10px 0px 0px;
-    bottom:0px;
-    background-color:rgb(136,147,175);
-    width:1px;
-    height:12%;
-}
-.right{
-    width:100px;
-    height:320px;
-    position:fixed;
-    bottom:0%;
-    left:3%;
-    writing-mode: vertical-rl;
-    letter-spacing: 1px;
-    color:white;
-    overflow: initial;
-	background-color:white;
-}
-.line-right{
-    position:fixed;
-    left:3%;
-    margin:0px 10px 0px 0px;
-    bottom:0px;
-    background-color:rgb(136,147,175);
-    width:1px;
-    height:12%;
-}
- .box{
-    margin:16% 0 10% 21%;
-    display:block;
-    width:400px;
-    height:500px;
-    float:left;
- }
-  p{
-    font-family: cust1;
-    color:rgb(136,147,175);
-    line-height: 25px;
-    font-size: 17px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
-  .image-border{
-	float:left;
-	width:300px;
-	height:330px;
-	margin:16% 0% 0% 10%;
-	border:3px solid rgb(100,264,263);
-	border-radius:2%;
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
-.image-border div{
-	background-color:rgb(100,264,263);
-	width:100%;
-	height:100%;
-	margin:7% 0% 0% 7%;
-	border-radius:2%;
-}
-.image-border div img {
-    width:100%;
-    height:100%;
-    border-radius: 2%;
-	opacity:1;
-}
-.image-border div img:hover{
-	opacity:.44;
-} 
+  
+  input:checked + .slider {
+    background-color: rgba(38, 214, 65, 0.837);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
