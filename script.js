@@ -9,7 +9,12 @@ var intrevel,el;
             var n = d.toLocaleTimeString();
             var day=n.slice(8);
             var time=parseInt(n);
-            if(day=="PM" && time>6 ||day=="AM" && time < 6){
+            if(time > 18 && day=="" || time < 6 && day==""){
+                var x = document.getElementById("check");
+                x.setAttribute("checked", "True");
+                document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(30,30,30);";
+            }
+            else if(day=="PM" && time>6 ||day=="AM" && time < 6){
                 var x = document.getElementById("check");
                 x.setAttribute("checked", "True");
                 document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(30,30,30);";
