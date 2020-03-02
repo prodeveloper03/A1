@@ -15,20 +15,20 @@
 
             var d = new Date();
             var n = d.toLocaleTimeString();
-            // if(n>6){
-            //     document.getElementById("crtime").innerHTML =typeof(n);
-            // }
-            var day=n.slice(7);
+            var day=n.slice(8);
             var time=parseInt(n);
-            if(day=="PM" && time > 6 || day=="AM" && time < 6){
-                document.getElementById("check").checked==True;
-                var x=document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(30,30,30);";
+            if(day=="PM" && time>6 ||day=="AM" && time < 6){
+                var x = document.getElementById("check");
+                x.setAttribute("checked", "True");
+                document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(30,30,30);";
             }
-            // document.getElementById("crtime").innerHTML =parseInt(n);
-            // document.getElementById("crtime").innerHTML = n;
-            // if(n>6){
-            //     alert("dark");
-            // }
+            else{
+                var x = document.getElementById("check");
+                x.setAttribute("checked", "False");
+                document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(223, 223, 223);";
+            }
+
+    
 
             var time=Math.floor((Math.random()*10)*2)*100;
             time+=4000;
@@ -75,7 +75,7 @@
         <p id="loading"></p>
     </div>
     <label class="switch">
-        <input type="checkbox" id="check" onclick="slider()">
+        <input type="checkbox" id="check" onclick="slider()" >
         <span class="slider round"></span>
     </label>
     <center><p id="crtime"></p></center>
