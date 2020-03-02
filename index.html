@@ -1,52 +1,46 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>&#x1F468;&#x200D;&#x1F4BB; Alan S Mathew | Web Programmer</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-            <div class="nav">
-                    <ul>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Experience</a></li>
-                        <li><a href="">About</a></li>
-                    </ul>
-                    <div class="resume">Resume</div>
-            </div>
-        <div class="logo">
-            <div class="a">
-                A
-            </div>
-        </div>
-        
-        <div class="intro">
-            <h6>Hi, my name is</h6>
-            <h1 style=color:rgb(230,241,254);>Alan S Mathew.<h1>
-            <h1 style=color:rgb(136,147,175);>I build things for the web.</h1><br><br>
-            <h5>sorry im working on this intro part</h5>
-            <br><br><br>
-            <button>Get In Touch</button>
-        </div>
-
-        <div class="box" >
-            <h3>About me &#x1F468;&#x200D;&#x1F4BB;</h3>
-            <p>
-                Hello! im Alan S Mathew a webprogramer who likes to work on
-                live projects and designs.
-            </p>
-        </div>
-        
-        <div class="image">
-                <img src="assets/pro.jpg" />
-                <div class="over"></div>
-        </div>
-        
-
-    <!-- division for vertical line and email(right conner) -->
-
-        <div class="left">
-            <a href=mailto:alansmathew@icloud.com>alansmathew@icloud.com</a>
-            <div class="line"></div>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan S Mathew</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script>
+        var intrevel,el;
+        var dot=""
+        var j=0;
+        var i=0;
+        var blink = ["|", "/", "-", "\\"];
+        function loading(){
+            var time=Math.floor((Math.random()*10)*2)*100;
+            time+=4000;
+            intrevel=Math.floor(time/4);
+            dots();
+        }
+        function dots(){
+            dot=dot+" . ";
+            j+=1;
+            if(j==8) return;
+            document.getElementById("loading").innerHTML=" Loading "+ dot;
+            el=document.getElementById("loading").innerHTML;
+            blinking();
+            setTimeout(dots,intrevel);
+        }
+        function blinking(){
+            document.getElementById("loading").innerHTML=el+blink[i];
+            if(i==3) i=0;
+            else if(j==8) return;
+            else i+=1;
+            setTimeout(blinking, 200);
+        }
+    </script>
+</head>
+<body onload="loading()">
+    <!-- <div id="ani">
+        <video src="Untitled.m4v" width="70%" height="60%" autoplay></video>
+    </div> -->
+    <div class="lod">
+        <p id="loading"></p>
+    </div>
+</body>
 </html>
