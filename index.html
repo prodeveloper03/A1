@@ -12,6 +12,24 @@
         var i=0;
         var blink = ["|", "/", "-", "\\"];
         function loading(){
+
+            var d = new Date();
+            var n = d.toLocaleTimeString();
+            // if(n>6){
+            //     document.getElementById("crtime").innerHTML =typeof(n);
+            // }
+            var day=n.slice(7);
+            var time=parseInt(n);
+            if(day=="PM" && time > 6 || day=="AM" && time < 6){
+                document.getElementById("check").checked==True;
+                var x=document.getElementsByTagName("BODY")[0].style.cssText="background-color:rgb(30,30,30);";
+            }
+            // document.getElementById("crtime").innerHTML =parseInt(n);
+            // document.getElementById("crtime").innerHTML = n;
+            // if(n>6){
+            //     alert("dark");
+            // }
+
             var time=Math.floor((Math.random()*10)*2)*100;
             time+=4000;
             intrevel=Math.floor(time/4);
@@ -47,8 +65,8 @@
 
     </style>
 </head>
-<!-- <body onload="loading()"> -->
-<body>
+<body onload="loading()">
+<!-- <body> -->
     
     <!-- <div id="ani">
         <video src="Untitled.m4v" width="70%" height="60%" autoplay></video>
@@ -60,5 +78,6 @@
         <input type="checkbox" id="check" onclick="slider()">
         <span class="slider round"></span>
     </label>
+    <center><p id="crtime"></p></center>
 </body>
 </html>
