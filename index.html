@@ -9,17 +9,19 @@
     <style></style>
 </head>
 <body onload="loading()">
-    <div id="ani">
-        <video src="Untitled.m4v" width="70%" height="60%" autoplay></video>
+    <div id="ani" >
+        <center><video id="video" width="70%" height="60%" autoplay></video></center>
+        <div class="lod">
+            <center><p id="loading"></p></center>
+        </div>
     </div>
-    <div class="lod">
-        <p id="loading"></p>
+    <div id="body" style="display:none;">
+        <label class="switch" >
+            <input type="checkbox" id="check" onclick="slider()">
+            <span class="slider round"></span>
+        </label>
+        <p>🌙</p>
+        <p>🌞</p>
     </div>
-    <label class="switch">
-        <input type="checkbox" id="check" onclick="slider()" >
-        <span class="slider round"></span>
-    </label>
-    <p>🌙</p>
-    <p>🌞</p>
 </body>
 </html>
